@@ -1,0 +1,78 @@
+{% extends 'blog/base.html' %}
+{% block content %}  
+<form class="form"> 
+   <!--   名前 -->
+   <div class="item">
+     <label class="label_left" for="name">名前</label>
+     <input id="name" type="text" placeholder="名前を入力" required><br>
+   </div>
+ 
+   <!--   年齢 -->
+   <div class="item">
+     <label class="label_left" for="age">年齢</label>
+     <input id="age" type="number" placeholder="数字を入力" required><br>
+   </div>
+ 
+   <!--   メールアドレス -->
+   <div class="item">
+     <label  class="label_left" for="email">メールアドレス</label>
+     <input id="email" type="email" placeholder="メールアドレスを入力" required><br>
+   </div>
+ 
+   <!--   パスワード -->
+   <div class="item">
+     <label class="label_left" for="password">パスワード</label>
+     <input id="password" type="password" placeholder="パスワードを入力" required><br>
+   </div>
+ 
+   <!--   性別 -->
+   <div class="item">
+     <fieldset>
+       <legend>性別</legend>
+       <label for="dansei">男性</label>
+       <input id="dansei" type="radio" name="sex" value="dansei" checked><br>
+       <label for="zyosei">女性</label>
+       <input id="zyosei" type="radio" name="sex" value="zyosei"><br>
+     </fieldset>
+   </div>
+ 
+   <!--   興味のある分野 -->
+   <div class="item">
+     <fieldset>
+       <legend>興味のある分野</legend>
+       <label for="fashion">ファション</label>
+       <input type="checkbox" name="status" value="会社員" id="fashion"><br>
+       <label for="chemistry">化学</label>
+       <input type="checkbox" name="status" value="学生" id="chemistry"><br>
+       <label for="politics">政治</label>
+       <input type="checkbox" name="status" value="学生" id="politics"><br>
+       <label for="economy">経済</label>
+       <input type="checkbox" name="status" value="学生" id="economy"><br>
+     </fieldset>
+   </div>
+ 
+   <!--   備考 -->
+   <div class="item">
+     <label class="label_left" for="remarks">備考</label>
+     <textarea name="textarea" id="remarks" placeholder="備考を入力"></textarea><br>
+   </div>
+ 
+   <!--   出身地 -->
+   <div class="item">
+     <label  class="label_left"　for="prefecture">出身地</label>
+     <select name="prefecture" id="prefecture">
+       <option value="">以下から選択してください</option>
+       <option value="青森">青森</option>
+       <option value="秋田">秋田</option>
+       <option value="岩手">岩手</option>
+     </select><br>
+   </div>
+ 
+   <!--   名前 -->
+   <div class="btns">
+     <input type="submit" value="登録"><br>
+     <input type="reset" value="リセット">
+   </div>
+</form>
+
+{% endblock %}
